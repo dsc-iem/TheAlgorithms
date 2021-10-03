@@ -23,18 +23,21 @@
 
 #include <iostream>
 
-/// Recursive function to calculate exponent in \f$O(\log(n))\f$ using binary
-/// exponent.
-int binExpo(int a, int b) {
-    if (b == 0) {
-        return 1;
+/**
+ * it computes all the powers in a loop and multiplies the ones with the corresponding set bit in n to calculate exponent in \f$O(\log(n))\f$ using binary
+ exponent.
+*This approach will be faster in practice sience we dont have the overhead of the recursive calls.
+ */
+int binExpo_alt(int a, int b) {
+    int res = 1;
+    while (b > 0) {
+        if (b % 2) {
+            res = res * a;
+        }
+        a = a * a;
+        b /= 2;
     }
-    int res = binExpo(a, b / 2);
-    if (b % 2) {
-        return res * res * a;
-    } else {
-        return res * res;
-    }
+    return res;
 }
 
 /// Iterative function to calculate exponent in \f$O(\log(n))\f$ using binary
