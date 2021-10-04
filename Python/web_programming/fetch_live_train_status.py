@@ -6,6 +6,7 @@
 # import required modules
 import requests , json
 
+#make account in https://indianrailapi.com/api-collection/live-train-status get free API key
 # enter your api key here
 api_key = "Your_API_Key"
 
