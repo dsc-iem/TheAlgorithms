@@ -1,4 +1,4 @@
-/*This code converts a binary value to its hexadecimal equivalent. Here,we have used the while loop*/
+/*This code converts a binary value to its hexadecimal equivalent. Here,we have used the while loop.  To convert binary to hexadecimal number, you have to ask from user to enter a number in binary number system to convert that number into hexadecimal number system */
 
 print("Enter the Binary Number: ")
 bnum = int(input())
