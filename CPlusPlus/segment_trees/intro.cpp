@@ -1,33 +1,19 @@
-/*This introduction is range update query where either you can update a value in the array or find the minimum of an element in the range l to r*/
-#include <bits/stdc++.h>
-#define int 				long long
-#define ll          long long
-#define pb 					push_back
-#define endl 				'\n'
-#define ff 					first
-#define ss 					second
-#define vi 					vector<int>
-#define pii 				pair<int, int>
-#define all(x)				(x).begin(), (x).end()
-#define rep(i, x, y)		for(int i=x; i<y; i++)
-#define setbits(x) 			__builtin_popcountll(x)
-#define ios ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-#define INF 				1e19
-#define mod 				1000000007 // 1e9+7
- 
-#define watch(x) cout<<(#x)<<" is "<<(x)<<"\n"
-#define watch2(x,y) cout<<(#x)<<" is "<<(x)<<" and "<<(#y)<< " is " <<(y)<<"\n"
 
- using namespace std;
+/*This acts like an introduction template for segment trees  where either you can update a value in the array(sing update funcn) or find the minimum of an element in the range l to r(query funcn)*/
+
+/*The input is in the question was like 
+     a b c --> where a can be either 'q' or 'u' .if it is q then we have to find the min element in the range b to c.if a='u' then we have to update the element at b to c.
+*/
+#include <bits/stdc++.h>
+using namespace std;
 
 const int N = 200005;
  
- bool myCompare(int a,int b)
-{
-  return a>b;
-}
+ 
 int arr[N],st[N];
 
+
+/*Building the segment Tree*/
 
 void buildTree(int si,int ss,int se)//si-->segment index ,ss-->segment start,se-->segment index
 {
@@ -43,9 +29,10 @@ void buildTree(int si,int ss,int se)//si-->segment index ,ss-->segment start,se-
 
 }
 
+/*Function for finding the minumum in the given rnge */
 int query(int si,int ss,int se,int qs,int qe)
 {
-    if(qs>se || ss>qe)//if query is outside the range of segment return infinity
+    if(qs>se || ss>qe)//if query is outside the range of segment return infinity as it wont ahve any effect in min 
     return INT_MAX;
 
     if(qs<=ss && se<=qe)//if it totally belongs inside the range then return that vlaue  (Assume ss as 2 ,se as 4 ,qs=1 and qe=5)
@@ -58,6 +45,8 @@ int query(int si,int ss,int se,int qs,int qe)
  
 	return min(l , r);
 }
+
+/*Function for updating the value at a particular position*/
 void update(int si,int ss,int se,int qi,int val)
 {
     if(ss==se){
