@@ -1,4 +1,6 @@
-//Trapezoidal Method for the evaluation of Definite Integrals
+/*Trapezoidal Method for the evaluation of Definite Integrals
+*Time complexity= O(n) as only for loop is executed
+*Space complexity=O(n) as there is two double arrays used */
 #include<iostream>
 #include<cmath>
 using namespace std;
