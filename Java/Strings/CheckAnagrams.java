@@ -1,6 +1,7 @@
+//The time complexity of provided solution is O(max(a,b))  , where a and b are size of the two strings entered. 
+//The space complexity of solution is O(a+b) in worst case scenario when both the strings have all the letters with single occurence only.
 import java.util.HashMap;
-import java.util.Map;
-
+import java.util.Scanner;
 /**
  * Two strings are anagrams if they are made of the same letters arranged differently (ignoring the
  * case).
