@@ -8,7 +8,7 @@ We find the height of binary tree by the help of recursion. The function takes r
 If the root of the tree is null which means that it is an empty tree so height is -1
 Else with the help of recursion we find the height of both left and right subtress
 The highest value is actually considered and height is highest value of both + 1 (for root of the tree)
-Time Complexity->O(n) as we are travelling all nodes only once
+Time Complexity, Space Complexity->O(n) as we are travelling all nodes only once
 */
 
 struct node
