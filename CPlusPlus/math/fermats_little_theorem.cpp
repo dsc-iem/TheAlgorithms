@@ -1,25 +1,11 @@
-
 /*
-Sample Input :
-5
-3 2
-4 5
-7 4
-34534985349875439875439875349875 93475349759384754395743975349573495
-34543987529435983745230948023948 3498573497543987543985743989120393097595572309482304
-Sample Output :
-9
-1024
-2401
-735851262
-985546465
+Problem - Given A and B (No of Digits of A,B <10^6), Calculate (A^B)%(1e9+7)
+Using Fermats Little Theorem, which states, a^(m-1) ≡ 1 (mod m), to efficiently calculate the answer.
 */
-
 #include <bits/stdc++.h>
 #define ll long long int
-// Compute (A^B)%mod
 using namespace std;
-ll power(ll a, ll b, ll mod)
+ll power(ll a, ll b, ll mod) // Time Complexity O(log n)
 {
     if (b == 0)
         return 1;
