@@ -1,4 +1,7 @@
 // Check for balanced parentheses using stack
+// Time complexity - O(n)
+// Space complexity - O(n)
+
 #include<iostream>
 #include<string>
 using namespace std;
