@@ -1,3 +1,7 @@
+// Time complexity - O(n)
+// Space complexity - O(1)
+// In a binary search tree, the value of the nodes to the left of a node should be lesser and to the right of a node should be greater. The left and right subtrees must also be binary search trees.
+
 #include<iostream>
 #include<queue>
 using namespace std;
@@ -29,7 +33,7 @@ node* create()
 
 bool isBST(node *temp, int min=INT_MIN, int max=INT_MAX)
 {
-    if(temp==nullptr)
+    if(temp==nullptr) // there are no more nodes to check for
         return true;
     else if(temp->data>min && temp->data<max && isBST(temp->left,min,temp->data) && isBST(temp->right,temp->data,max))
         return true;
