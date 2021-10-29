@@ -1,3 +1,11 @@
+/* In this solution, we are calculating the 
+1. index of Next smaller element to the left (nsel), for each of the element of array (Line 12-29)
+2. index of Next smaller element to the right (nser), for each of the element of array (Line 31 - 49)
+3. then fetching the nsel and nser index in two separate arrays (nselIndex and nserInder) (Line 53-54)
+4. then calculation the area of all possible rectangles and storing it in a separate array (ans) (Line 58-59)
+5. then checking the maximum area and returning it (max) (Line 60-64) */
+
+
 class Solution {
 public:
 
