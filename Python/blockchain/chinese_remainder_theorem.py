@@ -14,7 +14,7 @@ Algorithm :
 from __future__ import annotations
 
 
-# Extended Euclid
+# function for Extended Euclid
 def extended_euclid(a: int, b: int) -> tuple[int, int]:
     """
     >>> extended_euclid(10, 6)
