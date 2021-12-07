@@ -1,0 +1,57 @@
+Suppose a problem has many solutions and there are 2 feasible solutions(A/c to constraints of problem)
+The problem requires minimization -> minimum cost to complete the task. (optimization problem)
+From the feasible solutions, chose the minimum cost solution -> optimal solution.
+
+Methods to solve optimization problems ->
+1. Greedy Methods
+2. Dynamic Programming
+3. Branch and Bound
+
+I. Greedy Methods - 
+Solved in stages.
+
+Algorithm -
+def greedy(a, n):
+    for i in n:
+        x = select(a)
+        if feasible(x):
+            solution += solution + x
+
+I.1 - Knapsack problem -
+You are given objects with weights and values, you have to pick items which can provide the maximum
+value without exceeding the capacity of the knapsack. 
+
+I.2 - Job Sequencing with Deadlines
+Arrange the jobs with the most profitable jobs to least profitable jobs and arrange them
+sequentially.
+
+I.3 - Optimal Merge Pattern
+Merge the smallest files first and keep merging the smaller files which will make
+it the most optimal merge pattern.
+
+I.4 - Huffman Coding
+Method to reduce size of data or message. Compression method.
+This method says -
+All characters should be arranged in increasing number of their counts.
+Create an optimal merge pattern tree.
+
+I.5 - Minimum Cost Spanning Tree - Prims and Kruskals Algorithm
+Spanning tree is a subgraph of a graph that has all vertices but V-1 edges.
+No. of spanning trees possible in a given graph - (No of edges)C(No of vertices -1) - no of cycles
+C is the combination.
+
+Prims Algo -
+1. Initially, select the minimum cost edge.
+2. Select the minimum edge connected to previous.
+3. Repeat the above steps.
+
+Kruskals Algo - O(n^2), Using min heap O(nlogn)
+1. Select the smallest cost edge.
+2. No matter if it is connected, select minimum cost edge.
+3. Discard edge if it is forming a cycle.
+
+Djikstra's Algorithm -
+1. Select a starting point.
+2. Initially, select the shortest path to next node.
+3. Apply relaxation to other connected nodes.
+4.
